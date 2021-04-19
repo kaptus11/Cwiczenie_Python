@@ -399,33 +399,28 @@ F2=[]
 F=[]
 for i in range (n):
     if i<(n-2):
-        print('1 ',i)
         a=D[i+1]*E[i+2]
         F1.append(a)
     elif i<(n-1):
-        print('2 ',i)
         a=D[i+1]*E[0]
         F1.append(a)
     else:
-        print('3 ',i)
         a=D[0]*E[1]
         F1.append(a)
         
 for i in range (n):
     if i<(n-3):
-        print('1 ',i)
         a=D[n-1]*E[n-2]
         F2.append(a)
     elif i<(n-2):
-        print('2 ',i)
         a=D[i-1]*E[n-1]
         F2.append(a)
     else:
-        print('3 ',i)
         a=D[i-1]*E[i-2]
         F2.append(a)
-print (F1)
-print (F2)
+#print (F1)
+#print (F2)
+
 for i in range (n):
     a=F1[i]-F2[i]
     F.append(a)
