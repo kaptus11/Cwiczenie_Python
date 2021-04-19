@@ -5,7 +5,7 @@ Created on Thu Apr  8 17:47:27 2021
 @author: HOME
 """
 import numpy as np
-
+import matplotlib.pyplot as plt
 '''
 print("####### Zadanie 2 #######")
 print("#######")
@@ -306,7 +306,6 @@ print("######################################################")
 print("\n")
 print("####### Zadanie 3 #######")
 print("#######")
-import numpy as np
 
 
 A1 = np.array([np.linspace(1,5,5),np.linspace(5,1,5)])
@@ -424,7 +423,71 @@ for i in range (n):
 for i in range (n):
     a=F1[i]-F2[i]
     F.append(a)
+print('D=',D)
+print('E=',E)
 print (F)
 print("######################################################")
 
-      
+print("\n")
+print("####### Zadanie 11 #######")
+print("#######")
+def zd11():
+    Q= np.round(10*np.random.rand(3,3))
+    a=0
+    for i in range(len(Q)):
+        a=a+Q[i,i]
+    return(Q,a)
+print(zd11())
+print("######################################################")
+
+print("\n")
+print("####### Zadanie 12 #######")
+print("#######")
+def zd12(n):
+    Q= np.round(10*np.random.rand(n,n))
+    for i in range(len(Q)):
+        Q[i,i]=0
+        Q[(len(Q)-1)-i,i]=0
+            
+    return(Q)
+
+print(zd12(3))
+print("######################################################")
+
+print("\n")
+print("####### Zadanie 13 #######")
+print("#######")
+def zd13(n):
+    Q= np.round(10*np.random.rand(n,n))
+    F=[]
+    f=0
+    for i in range(len(Q)):
+        if (i%2)!=0:
+         F=Q[i]
+         for j in range(len(F)):
+             f=f+F[j]
+    return(Q,f)      
+print(zd13(3))
+print("######################################################")
+
+print("\n")
+print("####### Zadanie 14 #######")
+print("#######")
+def lamda(x):
+    x=np.sin(2.0*x)
+    return(x)
+
+x = np.arange(-10.0, 10.0, 0.01)
+y = lamda(x)
+plt.plot(x,y,'r--') 
+print("######################################################")
+
+print("\n")
+print("####### Zadanie 15 #######")
+print("#######")
+import zad15
+
+x = np.arange(-10,10,0.1)
+y = zad15.lamda_15(x)
+plt.plot(x,y,'g+')
+print("######################################################")
