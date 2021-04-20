@@ -501,3 +501,12 @@ x = np.arange(-10.0, 10.0, 0.01)
 y= 3*lamda(x)+zad15.lamda_15(x)
 plt.plot(x,y,'b*')
 print("######################################################")
+
+print("\n")
+print("####### Zadanie 19 #######")
+print("#######")
+
+a = 1000000
+x = np.linspace(0, 2*np.pi, a)
+y = np.sin(x)
+calka = np.sum(2*np.pi/a*y)
