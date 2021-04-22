@@ -473,12 +473,9 @@ print("######################################################")
 print("\n")
 print("####### Zadanie 14 #######")
 print("#######")
-def lamda(x):
-    x=np.sin(2.0*x)
-    return(x)
-
+f14 = lambda x: np.sin(2.0*x)
 x = np.arange(-10.0, 10.0, 0.01)
-y = lamda(x)
+y=f14(x)
 plt.plot(x,y,'r--') 
 print("######################################################")
 
@@ -498,7 +495,7 @@ print("#######")
 import zad15
 
 x = np.arange(-10.0, 10.0, 0.01)
-y= 3*lamda(x)+zad15.lamda_15(x)
+y= 3*f14(x)+zad15.lamda_15(x)
 plt.plot(x,y,'b*')
 print("######################################################")
 
